@@ -1,0 +1,256 @@
+/* Background*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+  	background-color: #111111;
+  	margin: 0;
+    /*overflow-x: hidden;*/
+    height: 100%;
+    color:#BBBBBB;
+    text-transform: uppercase;
+}
+
+a{
+    color:#BBBBBB;
+    text-decoration: none;
+}
+
+.main_background {
+    z-index: -10;
+	position: fixed;
+ 	top: -50%;
+ 	left: -50%;
+ 	right: -50%;
+ 	bottom: -50%;
+ 	width: 200%;
+ 	height: 200vh;
+	background: transparent url('../images/background/background-noise.png') repeat 0 0;
+	background-repeat: repeat;
+	animation: bg-animation .2s infinite;
+	opacity: .9;
+ 	visibility: visible;
+}
+
+@keyframes bg-animation {
+	0% { transform: translate(0,0) }
+	10% { transform: translate(-5%,-5%) }
+	20% { transform: translate(-10%,5%) }
+	30% { transform: translate(5%,-10%) }
+	40% { transform: translate(-5%,15%) }
+	50% { transform: translate(-10%,5%) }
+	60% { transform: translate(15%,0) }
+	70% { transform: translate(0,10%) }
+	80% { transform: translate(-15%,0) }
+	90% { transform: translate(10%,5%) }
+	100% { transform: translate(5%,0) }
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: Avenir Heavy;
+    src: url("../css/fonts/Avenir-Heavy.ttf");
+}
+
+@font-face {
+    font-family: Avenir Medium;
+    src: url("../css/fonts/Avenir-Medium.ttf");
+}
+
+@font-face {
+    font-family: Avenir Roman;
+    src: url("../css/fonts/Avenir-Roman.ttf");
+}
+
+
+/* Grid */
+
+#index {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2.5% 27.5% 40% 27.5% 2.5%;
+    grid-template-rows: 4% 28% 58% 10%;
+}
+
+/* Text */
+
+.title {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    font-family: Avenir Heavy;
+    font-size: 6vmax;
+    white-space: pre-line;
+    line-height: 5.5vmax;
+}
+
+menu {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    font-family: Avenir Heavy;
+    font-size: 1vmax;
+    text-align: right;
+}
+
+menu a{
+    color:#BBBBBB;
+    margin-left:5%;
+    text-decoration: none;
+}
+
+#main_lines{
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    font-family: Avenir Roman;
+    font-size: 0.9vmax;
+    white-space: pre-line;
+}
+
+.main_line{
+    margin-top:-0.5%;
+    margin-bottom:0.5%;
+}
+
+.separator{
+    border-top: 3px solid #BBBBBB;
+    width: 15%;
+}
+
+.projects_button_separator{
+    border-top: 3px solid #BBBBBB;
+    width: 50%;
+    margin: auto;
+}
+
+#projects_button{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-family: Avenir Heavy;
+    font-size: 2.2vmax;
+    cursor: pointer;
+}
+
+
+#projects {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 4% 92% 4%;
+    grid-template-rows: 10% repeat(4, 18%) 10%;
+}
+
+#project_1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#project_2 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#project_3 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+#project_4 {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.project {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1.5% 64.5% 32.5% 1.5%;
+    grid-template-rows: 8% 58% 28% 6%;
+    cursor: pointer;
+}
+
+.project_background{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background-position: center;
+    background-size: 70%;
+    z-index:0;
+    opacity:0;
+    transition: opacity 0.5s; 
+}
+
+.project_background.fade {
+    opacity: 0.12;
+}
+
+.project_separator{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    border-top: 3px solid #BBBBBB;
+    width: 100%;
+    z-index: 1;
+}
+
+.project_categories{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    font-family: Avenir Roman;
+    font-size: 0.85vmax;
+    text-align: right;
+    margin-top:1%;
+}
+
+.project_title{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: Avenir Heavy;
+    font-size:3.5vmax;
+}
+
+.project_description{
+    grid-column: 2 / 2;
+    grid-row: 3 / 4;
+    font-family: Avenir Roman;
+    font-size: 0.9vmax;
+    white-space: pre-line;
+    line-height: 0.9vmax;
+}
+
+
+.project_categories span{
+    margin-left:10%;
+}
+
+#socials{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 40% 40% 20%;
+    text-align: center;
+    height:20%;
+}
+
+#social_logos{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#social_logos a{
+    transition: filter 0.5s; 
+}
+
+#social_logos a:hover{
+    filter: contrast(0%);
+}
+
+#social_logos a{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
