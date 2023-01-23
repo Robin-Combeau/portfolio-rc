@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,20 +9,28 @@
 </head>
 
 <body>
-    <div id="index">
-        <div class=" main_background"></div>
-        <h1 class="title"><a href="">Robin Combeau
+    <div id="main">
+        <div class="main_background"></div>
+        <h1 class="title"><a href="index.html">Robin Combeau
                 Dev & Design.</a></h1>
 
         <menu>
-            <a href="">A propos</a>
-            <a href="">Contact</a>
-            <a href=""> <svg width="24" height="24" viewBox="0 0 24 24">
+            <a href="about.html" id="about_button">A propos</a>
+            <a id="contact_button" onclick="show_contact()">Contact</a>
+            <a href="" id="light_button"> <svg width="24" height="24" viewBox="0 0 24 24">
                     <path id="sun"
                         d="M4.069,13H0V11H4.069a7.281,7.281,0,0,0,0,2ZM7.1,5.688,4.222,2.807,2.808,4.221,5.689,7.1A8.019,8.019,0,0,1,7.1,5.688ZM18.312,7.1l2.881-2.881L19.779,2.807,16.9,5.688A8.121,8.121,0,0,1,18.312,7.1ZM12,4a8.047,8.047,0,0,1,1,.069V0H11V4.069A8.047,8.047,0,0,1,12,4Zm0,16a8.047,8.047,0,0,1-1-.069V24h2V19.931A8.047,8.047,0,0,1,12,20Zm7.931-9a7.281,7.281,0,0,1,0,2H24V11ZM16.9,18.312l2.88,2.88,1.415-1.414-2.88-2.88A8.127,8.127,0,0,1,16.9,18.312ZM5.688,16.9l-2.88,2.88,1.414,1.414,2.88-2.88A8.053,8.053,0,0,1,5.688,16.9ZM12,6a6,6,0,1,0,6,6,6,6,0,0,0-6-6Z"
                         fill="#bbb" />
                 </svg></a>
+            <div id="contact_informations">
+                    <div class="separator"></div>
+                    <span id="email_adress">robintest@gmail.com</span>
+                    <img src="./images/icons/copy_contact.svg" onclick="copy_contact()"/>
+                    <p id="copy_to_clipboard_message">Copié dans le presse-papier</p>
+            </div>
         </menu>
+
+
 
         <div id="main_lines">
             <div class="separator"></div>
@@ -65,10 +73,10 @@
             <div class="project_background" onmouseover="project_hover(3)" onmouseout="project_hover(3)"></div>
             <div class="project_categories"><span>Wordpress</span><span>Web Design</span></div>
             <h2 class="project_title">Hiphen</h2>
-            <p class="project_description">Design, rédaction de contenu et 
+            <p class="project_description">Design, rédaction de contenu et
                 création du site web pour l'entreprise Hiphen
             </p>
-            
+
         </div>
 
         <div id="project_4" class="project">
@@ -85,18 +93,19 @@
     <div id="socials">
         <div id="social_logos">
             <a href="https://www.linkedin.com/in/robin-combeau/">
-                <img src="./images/icons/linkedin.svg"/>
+                <img src="./images/icons/linkedin.svg" />
             </a>
             <a href="https://github.com/Robin-Combeau">
-                <img src="./images/icons/github.svg"/>
+                <img src="./images/icons/github.svg" />
             </a>
             <a href="https://dribbble.com/robin-combeau">
-                <img src="./images/icons/dribbble.svg"/>
+                <img src="./images/icons/dribbble.svg" />
             </a>
         </div>
     </div>
 
     <script src="js/project_background_hover.js"></script>
+    <script src="js/contact_drop_down.js"></script>
 
 </body>
 

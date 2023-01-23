@@ -73,7 +73,7 @@ a{
 
 /* Grid */
 
-#index {
+#main {
     display: grid;
     height: 100%;
     grid-template-columns: 2.5% 27.5% 40% 27.5% 2.5%;
@@ -101,8 +101,46 @@ menu {
 
 menu a{
     color:#BBBBBB;
-    margin-left:5%;
+    margin-left:8%;
     text-decoration: none;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+.selected_menu{
+    color:#707070;
+}
+
+#contact_informations{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s, color 0.4s linear;
+    color:#707070;
+    height:15%;
+    width:100%;
+}
+
+#contact_informations .separator{
+    border-top: 2px solid #707070;
+    position: relative;
+    width: 40%;
+    right:-60%;
+    margin-bottom:1%;
+    margin-top:2.5%;
+}
+
+#contact_informations img{
+    margin-left:2%;
+    margin-top:2%;
+    cursor:pointer;
+}
+
+#contact_informations #copy_to_clipboard_message{
+    font-size: 0.6vmax;
+    font-family: Avenir Roman;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.15s linear;
 }
 
 #main_lines{
@@ -254,3 +292,8 @@ menu a{
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
+
+
+
+/* Contact */
+
