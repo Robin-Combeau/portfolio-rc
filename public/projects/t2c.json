@@ -1,0 +1,19 @@
+{
+    "title": "test",
+    "categories": [
+        { "1": "Projet Personnel" },
+        { "2": "Etude UX" },
+        { "3": "UI Design" }
+    ],
+    "description_short": "Redesign de l'application de transport de l'agglomération de Clermont-Ferrand",
+    "description_long": "Redesign de l'application de transport de l'agglomération de Clermont-Ferrand",
+    "images": [
+        { "background_image_hover": "../images/projects/project_list_background/T2C.png" },
+        { "1": "../images/projects/T2C/0.png" },
+        { "2": "../images/projects/T2C/1.png" },
+        { "3": "../images/projects/T2C/2.png" },
+        { "4": "../images/projects/T2C/3.png" },
+        { "5": "../images/projects/T2C/4.png" },
+        { "6": "../images/projects/T2C/5.png" }
+    ]
+}
