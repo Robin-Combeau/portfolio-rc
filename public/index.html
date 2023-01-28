@@ -9,50 +9,60 @@
 </head>
 
 <body>
+
     <div id="main">
         <div class="main_background"></div>
-        <h1 class="title"><a href="index.html">Robin Combeau
-                Dev & Design.</a></h1>
+
+        <h1 class="main_title"><a href="index.html">Robin Combeau</a>
+            <a href="index.html" id="main_subtitle">Dev & Design.</a>
+        </h1>
 
         <menu>
-            <a href="about.html" id="about_button">A propos</a>
+            <a id="about_button" onclick="show_about()">A propos</a>
             <a id="contact_button" onclick="show_contact()">Contact</a>
-            <a href="" id="light_button"> <svg width="24" height="24" viewBox="0 0 24 24">
-                    <path id="sun"
-                        d="M4.069,13H0V11H4.069a7.281,7.281,0,0,0,0,2ZM7.1,5.688,4.222,2.807,2.808,4.221,5.689,7.1A8.019,8.019,0,0,1,7.1,5.688ZM18.312,7.1l2.881-2.881L19.779,2.807,16.9,5.688A8.121,8.121,0,0,1,18.312,7.1ZM12,4a8.047,8.047,0,0,1,1,.069V0H11V4.069A8.047,8.047,0,0,1,12,4Zm0,16a8.047,8.047,0,0,1-1-.069V24h2V19.931A8.047,8.047,0,0,1,12,20Zm7.931-9a7.281,7.281,0,0,1,0,2H24V11ZM16.9,18.312l2.88,2.88,1.415-1.414-2.88-2.88A8.127,8.127,0,0,1,16.9,18.312ZM5.688,16.9l-2.88,2.88,1.414,1.414,2.88-2.88A8.053,8.053,0,0,1,5.688,16.9ZM12,6a6,6,0,1,0,6,6,6,6,0,0,0-6-6Z"
-                        fill="#bbb" />
-                </svg></a>
             <div id="contact_informations">
-                    <div class="separator"></div>
-                    <span id="email_adress">robintest@gmail.com</span>
-                    <img src="./images/icons/copy_contact.svg" onclick="copy_contact()"/>
-                    <p id="copy_to_clipboard_message">Copié dans le presse-papier</p>
+                <div class="separator"></div>
+                <span id="email_adress">robintest@gmail.com</span>
+                <img src="./images/icons/copy_contact.svg" onclick="copy_contact()" />
+                <p id="copy_to_clipboard_message">Copié dans le presse-papier</p>
             </div>
         </menu>
 
-
-
-        <div id="main_lines">
+        <div id="index_lines" class="main_lines">
             <div class="separator"></div>
-            <p class="main_line">TRAVAILLE ACTUELLEMENT A SOPRA STERIA POUR LE CLIENT ORANGE
-                (PHP, JAVASCRIPT… + EN COURS DE FORMATION ANGULAR JAVA)</p>
+            <p class="main_line">Travaille actuellement à Sopra Steria pour le client Orange
+                (Php, Javascript, Java...etc. en cours de formation Angular / Spring Boot)</p>
             <div class="separator"></div>
-            <p class="main_line">DEVELOPPEUR WEB AVEC 3 ANS D'EXPERIENCE</p>
+            <p class="main_line">Développeur web avec 3 ans d'expérience</p>
             <div class="separator"></div>
-            <p class="main_line">DESIGN D'INTERFACES, JEUX, MUSIQUE</p>
+            <p class="main_line">Compétences en UX et UI</p>
         </div>
 
         <div id="projects_button">
             <div class="projects_button_separator"></div>
             Projets
         </div>
+
+        <div id="about_lines" class="main_lines">
+            <div class="separator"></div>
+            <p class="main_line">Je suis un développeur web âgé de 28 ans
+                et j'ai eu l'occasion de travailler sur diverses technologies
+                au cours de ces dernières années (PHP et Java principalement).</p>
+            <div class="separator"></div>
+            <p class="main_line">A côté de cette expérience de développeur, je m'intéresse fortement
+                aux design d'interfaces et à l'user experience dans le digital.</p>
+            <div class="separator"></div>
+            <p class="main_line">En dehors de la vie professionnelle, j'ai d'autres passions comme
+                le volley-ball, la musique... et bien d'autres !</p>
+        </div>
     </div>
 
     <div id="projects">
         <div id="project_1" class="project">
             <div class="project_separator"></div>
-            <div class="project_background" onmouseover="project_hover(1)" onmouseout="project_hover(1)"></div>
-            <div class="project_categories"><span>Projet Personnel</span><span>UI/UX Design</span></div>
+            <div class="project_background" onmouseover="project_hover(1)" onmouseout="project_hover(1)" onclick="show_project(1)"></div>
+            <div class="project_categories"><span>Projet Personnel</span><span>UI Design</span><span>Etude UX</span>
+            </div>
             <h2 class="project_title">T2C Transport App</h2>
             <p class="project_description">Redesign de l'application de transport de
                 l'agglomération de Clermont-Ferrand</p>
@@ -60,34 +70,129 @@
 
         <div id="project_2" class="project">
             <div class="project_separator"></div>
-            <div class="project_background" onmouseover="project_hover(2)" onmouseout="project_hover(2)"></div>
+            <div class="project_background" onmouseover="project_hover(2)" onmouseout="project_hover(2)" onclick="show_project(2)"></div>
             <div class="project_categories"><span>Projet Personnel</span><span>Web Dev</span><span>Web Design</span>
             </div>
             <h2 class="project_title">Portfolio</h2>
-            <p class="project_description">Création d'un portfolio minimaliste pour
-                présenter divers projets personnels</p>
+            <p class="project_description">Création de mon portfolio minimaliste</p>
         </div>
 
         <div id="project_3" class="project">
             <div class="project_separator"></div>
-            <div class="project_background" onmouseover="project_hover(3)" onmouseout="project_hover(3)"></div>
+            <div class="project_background" onmouseover="project_hover(3)" onmouseout="project_hover(3)" onclick="show_project(3)"></div>
             <div class="project_categories"><span>Wordpress</span><span>Web Design</span></div>
             <h2 class="project_title">Hiphen</h2>
             <p class="project_description">Design, rédaction de contenu et
                 création du site web pour l'entreprise Hiphen
             </p>
-
         </div>
 
         <div id="project_4" class="project">
             <div class="project_separator"></div>
-            <div class="project_background" onmouseover="project_hover(4)" onmouseout="project_hover(4)"></div>
-            <div class="project_categories"><span>Projet Personnel</span><span>Game Dev</span></div>
-            <h2 class="project_title">Unity Learning</h2>
-            <p class="project_description">Recréation du premier jeu d'arcade
-                Donkey Kong sur Unity
-            </p>
+            <div class="project_background" onmouseover="project_hover(4)" onmouseout="project_hover(4)" onclick="show_project(4)"></div>
+            <div class="project_categories"><span>Web</span><span>UX/UI</span><span>Unity</span><span>...etc.</span>
+            </div>
+            <h2 class="project_title">Autres projets</h2>
+            <p class="project_description">Divers autres projets réalisés depuis 2021</p>
         </div>
+    </div>
+
+    <div id="project_page_1" class="project_page">
+        <div class="project_page_go_back" onclick="go_back_to_index(1)"><img src="./images/icons/arrow-left.svg" /></div>
+        <div class="project_page_separator"></div>
+        <div class="project_page_categories"><span>Projet Personnel</span><span>UI Design</span><span>Etude UX</span>
+        </div>
+        <h2 class="project_page_title">T2C Transport App</h2>
+        <div class="project_page_images">
+            <!-- <img class="project_page_img_very_large" src="" /> -->
+            <img class="project_page_img project_page_img_large_1" src="" />
+            <img class="project_page_img project_page_img_large_2" src="" />
+            <img class="project_page_img project_page_img_medium_5" src="" />
+            <img class="project_page_img project_page_img_medium_6" src="" />
+            <!-- <img class="project_page_img_small" src="" /> -->
+            <!-- <img class="project_page_img_small" src="" /> -->
+        </div>
+        <p class="project_page_description">
+            Projet de redesign de l'application de transport de l'agglomération de Clermont-Ferrand.
+
+            Étude UX et design d'une nouvelle interface partant des conclusions de l'étude.
+
+            Ce design comprend l'ensemble des fonctionnalités déjà présentes sur 
+            l'application ainsi que de nouvelles fonctionnalités.
+        </p>
+        <p class="project_page_link">
+            Réalisé avec Adobe XD.
+        </p>
+    </div>
+
+    <div id="project_page_2" class="project_page">
+        <div class="project_page_go_back" onclick="go_back_to_index(2)"><img src="./images/icons/arrow-left.svg" /></div>
+        <div class="project_page_separator"></div>
+        <div class="project_page_categories"><span>Cat 1</span><span>Cat 2</span><span>Cat 3</span>
+        </div>
+        <h2 class="project_page_title">Projet 2</h2>
+        <div class="project_page_images">
+            <!-- <img class="project_page_img_very_large" src="" /> -->
+            <img class="project_page_img project_page_img_large_1" src="" />
+            <img class="project_page_img project_page_img_large_2" src="" />
+            <img class="project_page_img project_page_img_medium_5" src="" />
+            <img class="project_page_img project_page_img_medium_6" src="" />
+            <!-- <img class="project_page_img_small" src="" /> -->
+            <!-- <img class="project_page_img_small" src="" /> -->
+        </div>
+        <p class="project_page_description">
+            Texte
+        </p>
+        <p class="project_page_link">
+            Texte
+        </p>
+    </div>
+
+    <div id="project_page_3" class="project_page">
+        <div class="project_page_go_back" onclick="go_back_to_index(3)"><img src="./images/icons/arrow-left.svg" /></div>
+        <div class="project_page_separator"></div>
+        <div class="project_page_categories"><span>Cat 1</span><span>Cat 2</span><span>Cat 3</span>
+        </div>
+        <h2 class="project_page_title">Projet 3</h2>
+        <div class="project_page_images">
+            <!-- <img class="project_page_img_very_large" src="" /> -->
+            <img class="project_page_img project_page_img_large_1" src="" />
+            <img class="project_page_img project_page_img_large_2" src="" />
+            <img class="project_page_img project_page_img_medium_5" src="" />
+            <img class="project_page_img project_page_img_medium_6" src="" />
+            <!-- <img class="project_page_img_small" src="" /> -->
+            <!-- <img class="project_page_img_small" src="" /> -->
+        </div>
+        <p class="project_page_description">
+            Texte
+        </p>
+        <p class="project_page_link">
+            Texte
+        </p>
+        </p>
+    </div>
+
+    <div id="project_page_4" class="project_page">
+        <div class="project_page_go_back" onclick="go_back_to_index(4)"><img src="./images/icons/arrow-left.svg" /></div>
+        <div class="project_page_separator"></div>
+        <div class="project_page_categories"><span>Cat 1</span><span>Cat 2</span><span>Cat 3</span>
+        </div>
+        <h2 class="project_page_title">Projet 4</h2>
+        <div class="project_page_images">
+            <!-- <img class="project_page_img_very_large" src="" /> -->
+            <img class="project_page_img project_page_img_large_1" src="" />
+            <img class="project_page_img project_page_img_large_2" src="" />
+            <img class="project_page_img project_page_img_medium_5" src="" />
+            <img class="project_page_img project_page_img_medium_6" src="" />
+            <!-- <img class="project_page_img_small" src="" /> -->
+            <!-- <img class="project_page_img_small" src="" /> -->
+        </div>
+        <p class="project_page_description">
+            Texte
+        </p>
+        <p class="project_page_link">
+            Texte
+        </p>
     </div>
 
     <div id="socials">
@@ -104,8 +209,11 @@
         </div>
     </div>
 
-    <script src="js/project_background_hover.js"></script>
+    <!-- Scripts -->
     <script src="js/contact_drop_down.js"></script>
+    <script src="js/about_page.js"></script>
+    <script src="js/project_background_hover.js"></script>
+    <script src="js/project_pages.js"></script>
 
 </body>
 
