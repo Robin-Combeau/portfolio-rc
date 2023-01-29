@@ -430,7 +430,6 @@ menu a:hover{
     background-size: 100%;
     background-position: center;
     background-repeat:no-repeat;
-
 }
 
 .project_page_img_full{
@@ -475,7 +474,7 @@ menu a:hover{
 
 .project_page_img_medium_4{
     grid-column: 3 / 5;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
 }
 
 .project_page_img_medium_5{
