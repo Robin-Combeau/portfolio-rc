@@ -244,7 +244,7 @@ menu a:hover{
     z-index:0;
     opacity:0;
     transition: opacity 0.5s;
-    /*background-size: 110%;*/
+    background-size: cover;
 }
 
 .project_background.fade {
@@ -362,6 +362,12 @@ menu a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition:background-color 0.4s linear;
+}
+
+.project_page_go_back:hover{
+    background-color:#707070;
+    transition: background-color 0.4s linear;
 }
 
 .project_page_separator{
@@ -419,8 +425,12 @@ menu a:hover{
 }
 
 .project_page_img{
-    border: 2px solid #BBBBBB;
+    border: 2px solid #2A2A2E;
     background-color:#111111;
+    background-size: 100%;
+    background-position: center;
+    background-repeat:no-repeat;
+
 }
 
 .project_page_img_full{
