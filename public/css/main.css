@@ -12,8 +12,9 @@ html{
 body {
   	background-color: #111111;
   	margin: 0;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
     height: 100%;
+    width: 100%;
     color:#BBBBBB;
     text-transform: uppercase;
 }
@@ -37,6 +38,7 @@ a{
 	animation: bg-animation .2s infinite;
 	opacity: .9;
  	visibility: visible;
+    overflow:clip;
 }
 
 @keyframes bg-animation {
@@ -80,6 +82,15 @@ a{
     grid-template-rows: 4% 28% 58% 10%;
 }
 
+@media screen and (max-width: 1300px) {
+    #main {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 2.5% 27.5% 52.5% 15% 2.5%;
+        grid-template-rows: 4% 18% 68% 10%;
+    }
+}
+
 /* Text */
 
 .main_title {
@@ -89,6 +100,14 @@ a{
     font-size: 6vmax;
     white-space: pre-line;
     line-height: 5.5vmax;
+}
+
+@media screen and (max-width: 1300px) {
+    .main_title {
+        font-size: 4.6vmax;
+        white-space: pre-line;
+        line-height: 4.2vmax;
+    }
 }
 
 menu {
@@ -109,6 +128,23 @@ menu a{
 
 menu a:hover{
     color:#707070;
+}
+
+@media screen and (max-width: 1700px) {
+
+    menu {
+        font-size: 1.4vmax;
+        margin-left:8%;
+    }
+
+}
+@media screen and (max-width: 1300px) {
+
+    menu a{
+        margin:auto;
+        width:100%;
+        text-align: center;
+    }
 }
 
 .selected_menu{
@@ -155,6 +191,14 @@ menu a:hover{
     white-space: pre-line;
 }
 
+@media screen and (max-width: 1700px) {
+
+    .main_lines {
+        font-size: 1.2vmax;
+    }
+
+}
+
 .main_line{
     margin-top:-0.5%;
     margin-bottom:0.5%;
@@ -165,10 +209,36 @@ menu a:hover{
     width: 15%;
 }
 
+@media screen and (max-width: 1700px) {
+
+    .separator{
+        border-top: 2px solid #BBBBBB;
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .separator{
+        border-top: 2px solid #BBBBBB;
+        width: 230px;
+    }
+
+}
+
 .projects_button_separator{
     border-top: 3px solid #BBBBBB;
     width: 50%;
     margin: auto;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .projects_button_separator {
+        border-top: 2px solid #BBBBBB;
+    }
+
 }
 
 #projects_button{
@@ -182,11 +252,27 @@ menu a:hover{
     cursor: pointer;
 }
 
+@media screen and (max-width: 1700px) {
+
+    #projects_button{
+        font-size: 2.7vmax;
+    }
+
+}
+
 #projects {
     display: grid;
-    height: 100%;
-    grid-template-columns: 4% 92% 4%;
+    height: 92%;
+    grid-template-columns: 6% 88% 6%;
     grid-template-rows: 10% repeat(4, 18%) 10%;
+}
+
+@media screen and (max-width: 1300px) {
+
+    #projects_button{
+        font-size: 2.7vmax;
+    }
+
 }
 
 #project_1 {
@@ -232,7 +318,7 @@ menu a:hover{
 .project {
     display: grid;
     grid-template-columns: 1.5% 64.5% 32.5% 1.5%;
-    grid-template-rows: 8% 58% 28% 6%;
+    grid-template-rows: 8% 37% 26% 13% 10% 6%;
     cursor: pointer;
 }
 
@@ -259,6 +345,14 @@ menu a:hover{
     z-index: 1;
 }
 
+@media screen and (max-width: 1700px) {
+
+    .project_separator {
+        border-top: 2px solid #BBBBBB;
+    }
+
+}
+
 .project_categories{
     grid-column: 3 / 4;
     grid-row: 2 / 3;
@@ -268,6 +362,38 @@ menu a:hover{
     margin-top:1%;
 }
 
+.project_categories span{
+    margin-left:10%;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .project_categories {
+        font-size: 1.1vmax;
+        margin-top:2%;
+    }
+    .project_categories span{
+        margin-left:5%;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .project_categories {
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+        font-size: 1.1vmax;
+        margin-top:0%;
+        text-align: left;
+    }
+    .project_categories span{
+        margin-left:0%;
+        margin-right:2.5%;
+    }
+
+}
+
 .project_title{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -275,17 +401,54 @@ menu a:hover{
     font-size:3.5vmax;
 }
 
+@media screen and (max-width: 1700px) {
+
+    .project_title {
+        font-size: 4.5vmax;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .project_title {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        font-family: Avenir Heavy;
+        font-size: 3.5vmax;
+    }
+
+}
+
 .project_description{
     grid-column: 2 / 2;
-    grid-row: 3 / 4;
+    grid-row: 4 / 6;
     font-family: Avenir Roman;
     font-size: 0.9vmax;
     white-space: pre-line;
     line-height: 0.9vmax;
 }
 
-.project_categories span{
-    margin-left:10%;
+@media screen and (max-width: 1700px) {
+
+    .project_description {
+        font-size: 1.2vmax;
+        line-height: 1.2vmax;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .project_description {
+        grid-column: 2 / 4;
+        grid-row: 3 / 5;
+        font-size: 1.3vmax;
+        line-height: 1.3vmax;
+        margin-top:0%;
+        text-align: left;
+    }
+
 }
 
 #socials{
@@ -334,11 +497,11 @@ menu a:hover{
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #BBBBBB; 
+    background: #707070; 
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #707070; 
+    background: #BBBBBB; 
 }
 
 
