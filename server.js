@@ -10,5 +10,5 @@ app.use('/images', express.static(__dirname + '/public/images'));
 
 var server = app.listen(8081, function() {
     var port = server.address().port;
-    console.log("Server started at http://localhost:%s", port);
+    console.log("Server started at https://portfolio-ki0c.onrender.com:%s", port);
 });
