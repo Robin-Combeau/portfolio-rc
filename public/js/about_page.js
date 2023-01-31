@@ -24,6 +24,7 @@ function show_about() {
             projects_button.style.display = 'none';
             index_lines.style.display = 'none';
             projects.style.display = 'none';
+            about_button.innerHTML = "Retour"
             main_subtitle.innerHTML = "A propos.";
             main_subtitle.style.opacity = 1;
             about_lines.style.visibility = 'visible';
@@ -41,6 +42,7 @@ function show_about() {
         projects.style.display = 'grid';
         setTimeout(() => {
             main_subtitle.innerHTML = "Dev & Design.";
+            about_button.innerHTML = "A propos"
             main_subtitle.style.opacity = 1;
             projects_button.style.opacity = 1;
             index_lines.style.opacity = 1;

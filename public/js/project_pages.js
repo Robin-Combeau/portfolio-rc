@@ -11,7 +11,6 @@ function show_project(i) {
     let project_go_back = project_page.getElementsByClassName("project_page_go_back")[0];
     
     scroll_height = document.documentElement.scrollTop;
-    console.log(scroll_height)
     main.style.transition = transition_animation;
     projects.style.transition = transition_animation;
     socials.style.transition = transition_animation;
@@ -36,7 +35,6 @@ function show_project(i) {
 }
 
 function go_back_to_index(i) {
-    console.log(scroll_height)
     let project_page_id = ("project_page_".concat(i));
     let project_page = document.getElementById(project_page_id);
     
