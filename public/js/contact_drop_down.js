@@ -2,6 +2,7 @@ let contact_button_click = 0;
 const contact_button = document.getElementById("contact_button");
 const contact_block = document.getElementById("contact_informations");
 const copy_message = document.getElementById("copy_to_clipboard_message");
+const email_adress = document.getElementById("email_adress");
 
 function show_contact() {
     if (contact_button_click == 0) {    
