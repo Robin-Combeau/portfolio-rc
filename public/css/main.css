@@ -256,8 +256,17 @@ menu a:hover {
 
 @media screen and (max-width: 1300px) {
 
+    #contact_informations img {
+        width:50px;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
     #contact_informations {
         text-align: center;
+        margin-left:5%;
     }
 
 }
