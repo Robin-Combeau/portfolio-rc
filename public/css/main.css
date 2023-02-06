@@ -143,6 +143,13 @@ a {
     line-height: 5.5vmax;
 }
 
+@media screen and (max-width: 800px) {
+    .main_title {
+        font-size: 4.8vmax;
+        line-height: 4.4vmax;
+    }
+}
+
 menu {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -169,16 +176,7 @@ menu a:hover {
 @media screen and (max-width: 1700px) {
 
     menu {
-        font-size: 1.4vmax;
-        margin-left: 8%;
-    }
-
-}
-
-@media screen and (max-width: 1000px) {
-
-    menu {
-        font-size: 1.8vmax;
+        font-size: 1.6vmax;
         margin-left: 8%;
     }
 
