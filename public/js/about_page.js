@@ -41,7 +41,7 @@ function show_about() {
         index_lines.style.display = 'block';
         projects.style.display = 'grid';
         setTimeout(() => {
-            main_subtitle.innerHTML = "Dev & Design.";
+            main_subtitle.innerHTML = "Dev web.";
             about_button.innerHTML = "A propos"
             main_subtitle.style.opacity = 1;
             projects_button.style.opacity = 1;
